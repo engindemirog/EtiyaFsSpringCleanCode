@@ -28,5 +28,9 @@ public class Model extends BaseEntity<Integer> {
     @ManyToOne
     @JoinColumn(name="transmissionId")
     private Transmission transmission;
+
+    @OneToMany(mappedBy = "model")
+    private List<Car> cars;
+
 }
 
